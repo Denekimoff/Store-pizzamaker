@@ -1,5 +1,7 @@
 import React from 'react'
 
+import axios, { AxiosError } from 'axios'
+
 import { Categories } from '../components/Categories/Categories'
 import { Sort } from '../components/Sort/Sort'
 import { PizzaBlog } from '../components/PizzaBlog/PizzaBlog'
@@ -9,6 +11,13 @@ import { PizzaSkeleton } from '../components/PizzaBlog/PizzaSkeleton'
 export const Home = () => {
   const [pizzaDatas, setPizzaDatas] = React.useState([])
   const [isLoading, setIsLoading] = React.useState(true)
+
+  // axios
+  // .get('https://6390aae065ff4183111b1700.mockapi.io/pizzas')
+  // .then((response) => {
+  //       setPizzaDatas(response.data)
+  //       setIsLoading(false)
+  // })
 
   React.useEffect(() => {
     fetch('https://6390aae065ff4183111b1700.mockapi.io/pizzas')

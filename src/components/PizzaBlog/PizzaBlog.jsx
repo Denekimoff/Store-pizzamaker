@@ -12,6 +12,7 @@ export const PizzaBlog = ({ imageUrl, price, sizes, title, types }) => {
   const [typesIndex, setTypesIndex] = React.useState(0)
 
   return (
+    <div className='pizza-block-wrapper'>
     <div className="pizza-block">
                 <img
                   className="pizza-block__image"
@@ -58,6 +59,7 @@ export const PizzaBlog = ({ imageUrl, price, sizes, title, types }) => {
                     <i>{count}</i>
                   </button>
                 </div>
+              </div>
               </div>
   )
 }
